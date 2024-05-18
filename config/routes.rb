@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   post("/update_user/:user_id", { :controller => "users", :action => "update" })
 
   get("/venues", { :controller => "venues", :action => "index" })
-  post("/insert_venue_record", { :controller => "venues", :action => "create" })
   get("/venues/:venue_id", { :controller => "venues", :action => "show" })
+  get("/delete_venue/:venue_id", { :controller => "venues", :action => "destroy" })
   post("/update_venue/:venue_id", { :controller => "venues", :action => "update" })
-  get("/delete_venue/:id_to_delete", { :controller => "venue", :action => "destroy" })
+  post("/insert_venue_record", { :controller => "venues", :action => "create" })
   
   post("/insert_comment_record", { :controller => "comments", :action => "create" })
 end
